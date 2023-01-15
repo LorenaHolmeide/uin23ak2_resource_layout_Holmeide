@@ -6,7 +6,7 @@
     --blue: #4EE7EB;
     --white: #FFFFFF;
     --maxwidth: 650px;
-    --rootsize: 20px;
+
 }
 
 body {
@@ -27,33 +27,46 @@ div.container {
 
 header {
     display: flex;
-    justify-content: space-between;
     padding: 1rem;
     color: var(--darkgrey);
     border-color: var(--darkgrey);
     border-style: solid;
+    border-width: thin;
+
+}
+
+
+#navBar {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    margin: 20px 0 0;
 
 
 }
 
-nav {
-    width: 100%;
-    display: flex;
-    gap: 1rem;
-    margin: 20px auto;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
 }
 
 nav a {
+
     color: var(--darkgrey);
+    display: inline-block;
     background-color: var(--lightgrey);
     text-decoration: none;
-    padding: 0.5rem;
-    display: inline-block;
+    padding: 1rem;
     text-transform: uppercase;
     transition: ease-in-out .4s;
     border-color: var(--darkgrey);
     border-style: solid;
+    border-bottom: none;
+    border-width: thin;
+
+
 
 }
 
@@ -70,7 +83,6 @@ main {
     border-style: solid;
     display: flex;
     padding: 20px;
-
-
+    border-width: medium thin thin thin;
 
 }
