@@ -123,14 +123,7 @@ function Category(event) {
     console.log(info)
     document.querySelector("#main").innerHTML = info
 
-    //console.log(info)
-    /*
-    document.getElementById("HTML").innerHTML = info
-    document.getElementById("CSS").innerHTML = info
-    document.getElementById("JavaScript").innerHTML = info
-    document.getElementById("React").innerHTML = info
-    document.getElementById("Sanity").innerHTML = info
-    */
+
 
 
 }
@@ -139,44 +132,6 @@ const liElements = document.querySelectorAll(".two")
 console.log(liElements)
 
 liElements.forEach(item => item.addEventListener("click", Category))
-/*
-function deleteProduct(product) {
-    //Finner <li>-elementet, legger til klassen hidden
-    document.querySelector("#seksjon-" + product).classList.add("hidden");
-    //Utsetter selve slettingen og oppdateringen av cart (like lenge som CSS-transition for <li>):
-    setTimeout(() => {
-        //Bruker splice for å fjerne element fra cart-array
-        cart.splice(product, 1)
-        //Skriver ut cart-visning på nytt
-        renderCart()
-    }, 700)
 
-}*/
-
-/*
-function toggleCategory1(id) {
-    console.log(typeof (id))
-    document.querySelector("#HTML").classList.toggle("hidden")
-    Category(id);
-
-}
-function toggleCategory2() {
-    document.querySelector("#CSS").classList.toggle("hidden")
-    Category()
-}
-function toggleCategory3() {
-    document.querySelector("#JavaScript").classList.toggle("hidden")
-    Category()
-}
-function toggleCategory4() {
-    document.querySelector("#React").classList.toggle("hidden")
-    Category()
-}
-function toggleCategory5() {
-    document.querySelector("#Sanity").classList.toggle("hidden")
-    Category()
-}
-
-*/
 
 
