@@ -1,4 +1,4 @@
-const resources = [
+resources = [
     {
         category: "HTML",
         text: "HTML står for HyperText Markup Language, og er et strukturspråk som brukes for å lage strukturer til nettside- og applikasjonsgrensesnitt.",
@@ -94,3 +94,89 @@ const resources = [
         ]
     },
 ]
+
+
+
+
+
+function Category(event) {
+    event.preventDefault()
+    const id = event.target.id
+    console.log(id)
+    let info = ""
+
+    resources.map((item, index) => {
+        let list = ""
+        if (id === item.category) {
+            item.sources.map(item => list += `<li><a href="${item.url}">${item.title}</a ></li>`)
+            info +=
+                `<artice= "seksjon-${index}">
+                <h3>${item.category}</h3> 
+                <p>${item.text}</p> 
+                <ul>${list}</ul>
+
+                </article>
+                `
+        }
+
+    })
+    console.log(info)
+    document.querySelector("#main").innerHTML = info
+
+    //console.log(info)
+    /*
+    document.getElementById("HTML").innerHTML = info
+    document.getElementById("CSS").innerHTML = info
+    document.getElementById("JavaScript").innerHTML = info
+    document.getElementById("React").innerHTML = info
+    document.getElementById("Sanity").innerHTML = info
+    */
+
+
+}
+
+const liElements = document.querySelectorAll(".two")
+console.log(liElements)
+
+liElements.forEach(item => item.addEventListener("click", Category))
+/*
+function deleteProduct(product) {
+    //Finner <li>-elementet, legger til klassen hidden
+    document.querySelector("#seksjon-" + product).classList.add("hidden");
+    //Utsetter selve slettingen og oppdateringen av cart (like lenge som CSS-transition for <li>):
+    setTimeout(() => {
+        //Bruker splice for å fjerne element fra cart-array
+        cart.splice(product, 1)
+        //Skriver ut cart-visning på nytt
+        renderCart()
+    }, 700)
+
+}*/
+
+/*
+function toggleCategory1(id) {
+    console.log(typeof (id))
+    document.querySelector("#HTML").classList.toggle("hidden")
+    Category(id);
+
+}
+function toggleCategory2() {
+    document.querySelector("#CSS").classList.toggle("hidden")
+    Category()
+}
+function toggleCategory3() {
+    document.querySelector("#JavaScript").classList.toggle("hidden")
+    Category()
+}
+function toggleCategory4() {
+    document.querySelector("#React").classList.toggle("hidden")
+    Category()
+}
+function toggleCategory5() {
+    document.querySelector("#Sanity").classList.toggle("hidden")
+    Category()
+}
+
+*/
+
+

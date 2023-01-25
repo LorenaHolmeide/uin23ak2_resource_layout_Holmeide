@@ -6,7 +6,6 @@
     --blue: #4EE7EB;
     --white: #FFFFFF;
     --maxwidth: 650px;
-
 }
 
 body {
@@ -17,11 +16,23 @@ body {
     padding-bottom: 0;
 }
 
+main {
+    position: relative;
+    width: var(--maxwidth);
+    max-width: 100%;
+    color: var(--darkgrey);
+    padding: 1rem;
+    transition: ease-in-out .5s;
+    position: relative;
+    border-top-color: var(--blue);
+    border-style: solid;
+    border-width: thick thin thin thin;
+}
+
 div.container {
     max-width: var(--maxwidth);
     margin: 40px auto;
     background-color: var(--white);
-
 
 }
 
@@ -35,13 +46,11 @@ header {
 
 }
 
-
 #navBar {
     width: 100%;
     display: flex;
     gap: 0.5rem;
     margin: 20px 0 0;
-
 
 }
 
@@ -49,11 +58,9 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-
 }
 
 nav a {
-
     color: var(--darkgrey);
     display: inline-block;
     background-color: var(--lightgrey);
@@ -67,22 +74,25 @@ nav a {
     border-width: thin;
 
 
-
 }
 
 nav a:hover {
     color: var(--white);
     background-color: var(--blue);
     border-color: var(--blue);
-
 }
 
-main {
-    border-color: var(--darkgrey);
-    border-top-color: var(--blue);
-    border-style: solid;
-    display: flex;
-    padding: 20px;
-    border-width: medium thin thin thin;
+
+
+
+
+
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 
 }
